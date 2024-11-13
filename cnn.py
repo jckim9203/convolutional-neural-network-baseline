@@ -15,6 +15,7 @@ x_test = x_test.reshape(-1, 28, 28, 1)
 # CNN 모델 구축
 model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+#    layers.Conv2D(32, (3, 3), activation='relu', padding='same', strides=(2,2), input_shape=(28, 28, 1)),
     layers.MaxPooling2D((2, 2)),
     layers.Conv2D(64, (3, 3), activation='relu'),
     layers.MaxPooling2D((2, 2)),
